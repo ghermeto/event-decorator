@@ -1,8 +1,8 @@
 # Event Decorator
 
-[![node](https://img.shields.io/node/v/event-decorator.svg)]()
+[![node](https://img.shields.io/node/v/events-decorator.svg)]()
 [![Build Status](https://travis-ci.org/ghermeto/event-decorator.svg?branch=master)](https://travis-ci.org/ghermeto/event-decorator)
-[![npm](https://img.shields.io/npm/v/event-decorator.svg)](https://www.npmjs.com/package/event-decorator)
+[![npm](https://img.shields.io/npm/v/events-decorator.svg)](https://www.npmjs.com/package/events-decorator)
 [![GitHub](https://img.shields.io/github/license/ghermeto/event-decorator.svg)](https://github.com/ghermeto/event-decorator/blob/master/LICENSE)
 [![David](https://img.shields.io/david/ghermeto/event-decorator.svg)](https://david-dm.org/ghermeto/event-decorator)
 [![David](https://img.shields.io/david/dev/ghermeto/event-decorator.svg)](https://david-dm.org/ghermeto/event-decorator?type=dev)
@@ -12,13 +12,13 @@ Decorates EventEmitter with handy methods when working with multiple events
 ## Install
 
 ```sh
-$ npm install --save event-decorator
+$ npm install --save events-decorator
 ```
 
 ## API
 
 ```javascript
-    const { onceAny, onceAll, decorate } = require('event-decorator');
+    const { onceAny, onceAll, decorate } = require('events-decorator');
 ```
 
 ### onceAny(emitter, eventNames, handler)
@@ -30,7 +30,7 @@ events.
 Returns a function to unsubscribe from the events.
 
 ```javascript
-const { onceAny } = require('event-decorator');
+const { onceAny } = require('events-decorator');
 
 const unsubscribe = onceAny(emitter, ['one', 'two', 'three'], (trigger, ...arguments) => {
     console.info(`first event was ${trigger}`);
@@ -59,7 +59,7 @@ events.
 Returns a function to unsubscribe from the events.
 
 ```javascript
-const { onceAll } = require('event-decorator');
+const { onceAll } = require('events-decorator');
 
 const unsubscribe = onceAll(emitter, ['one', 'two', 'three'], (argumentsArray) => {
     console.info(`the last event was ${trigger}`);
@@ -88,7 +88,7 @@ Returns a [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 for the `emitter`.
 
 ```javascript
-const { decorate } = require('event-decorator');
+const { decorate } = require('events-decorator');
 
 const decorated = decorate(emitter);
 
@@ -116,7 +116,7 @@ const unsub2 = decorated.onLast(['one', 'two', 'three'], (trigger, ...arguments)
 To count the in-flight requests on a express server:
 
 ```js
-const { onceAny } = require('event-decorator');
+const { onceAny } = require('events-decorator');
 
 let inflightRequests = 0;
 app.use((req, res, next) => {
@@ -131,7 +131,7 @@ app.use((req, res, next) => {
 To log the response time for each request: 
 
 ```js
-const { onceAny } = require("event-decorator");
+const { onceAny } = require("events-decorator");
 
 app.use((req, res, next) => {
     // hrtime.bigint is available on Node v10.7+

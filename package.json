@@ -1,7 +1,7 @@
 {
-  "name": "event-decorator",
+  "name": "events-decorator",
   "version": "0.1.0",
-  "description": "decorates EventEmitter functionality",
+  "description": "decorates EventEmitter with methods to handle multiple events",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -18,9 +18,13 @@
     "onany",
     "onall",
     "onlast",
-    "eventemitter"
+    "eventemitter",
+    "event-emitter",
+    "event-decorator"
   ],
-  "engines" : { "node" : ">=8.3.0" },
+  "engines": {
+    "node": ">=8.3.0"
+  },
   "author": "Guilherme Hermeto <gui.hermeto@gmail.com>",
   "license": "MIT",
   "repository": {
