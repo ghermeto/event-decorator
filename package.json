@@ -4,8 +4,9 @@
   "description": "decorates EventEmitter with methods to handle multiple events",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "lint": "eslint ."
+    "test": "mocha --exit",
+    "lint": "eslint .",
+    "cover": "nyc --check-coverage --lines 100 mocha"
   },
   "keywords": [
     "event",
@@ -36,6 +37,7 @@
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
   }
 }

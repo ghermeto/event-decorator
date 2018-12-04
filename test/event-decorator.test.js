@@ -137,6 +137,8 @@ describe('decorate', () => {
         const decorated = decorate(emitter);
         expect(emitter).to.be.an.instanceof(EventEmitter);
         expect(decorated).to.be.an.instanceof(EventEmitter);
+        expect(decorated).to.have.property('on');
+        expect(decorated).to.have.property('once');
     });
 
     it('should trap a onceAny method', () => {
