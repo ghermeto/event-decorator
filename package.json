@@ -24,7 +24,7 @@
     "event-decorator"
   ],
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=6.4.0"
   },
   "author": "Guilherme Hermeto <gui.hermeto@gmail.com>",
   "license": "MIT",
