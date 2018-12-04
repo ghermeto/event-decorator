@@ -30,6 +30,17 @@ function removeListeners(emitter, eventNames, handlerMap) {
 }
 
 /**
+ * Object.values polyfill (node 6 support)
+ * @param object
+ */
+function objectValues(object) {
+    return Object.keys(object).reduce((values, key) => {
+        values.push(object[key]);
+        return values;
+    }, [])
+}
+
+/**
  * triggers handler execution only on the first event is emitted
  * and removes listeners for all events
  * @param {EventEmitter} emitter
@@ -81,7 +92,7 @@ function onceAll(emitter, eventNames, handler) {
                 argumentsMap[name] = args;
             }
 
-            const argumentValues = Object.values(argumentsMap);
+            const argumentValues = objectValues(argumentsMap);
             if (argumentValues.length === eventNames.length) {
                 removeListeners(emitter, eventNames, handlerMap);
                 handler(Object.keys(argumentsMap), argumentValues);
