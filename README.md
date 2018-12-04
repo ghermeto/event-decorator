@@ -1,9 +1,11 @@
 # Event Decorator
 
+[![node](https://img.shields.io/node/v/event-decorator.svg)]()
 [![Build Status](https://travis-ci.org/ghermeto/event-decorator.svg?branch=master)](https://travis-ci.org/ghermeto/event-decorator)
 [![npm](https://img.shields.io/npm/v/event-decorator.svg)](https://www.npmjs.com/package/event-decorator)
 [![GitHub](https://img.shields.io/github/license/ghermeto/event-decorator.svg)](https://github.com/ghermeto/event-decorator/blob/master/LICENSE)
-[![David](https://img.shields.io/david/ghermeto/event-decorator.svg)]()
+[![David](https://img.shields.io/david/ghermeto/event-decorator.svg)](https://david-dm.org/ghermeto/event-decorator)
+[![David](https://img.shields.io/david/dev/ghermeto/event-decorator.svg)](https://david-dm.org/ghermeto/event-decorator?type=dev)
 
 Decorates EventEmitter with handy methods when working with multiple events
 
