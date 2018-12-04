@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-use-before-define": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "eol-last": "off",
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "comma-dangle": ["error", "never"],
+    "func-names": "off",
+    "no-else-return": "off",
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }]
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  }
+}

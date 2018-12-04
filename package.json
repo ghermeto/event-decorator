@@ -1,0 +1,33 @@
+{
+  "name": "event-decorator",
+  "version": "0.1.0",
+  "description": "decorates EventEmitter functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "event",
+    "events",
+    "on-any",
+    "on-all",
+    "on-first",
+    "on-last",
+    "onfirst",
+    "onany",
+    "onall",
+    "onlast",
+    "eventemitter"
+  ],
+  "engines" : { "node" : ">=8.3.0" },
+  "author": "Guilherme Hermeto <gui.hermeto@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0"
+  }
+}
