@@ -37,7 +37,7 @@ function objectValues(object) {
     return Object.keys(object).reduce((values, key) => {
         values.push(object[key]);
         return values;
-    }, [])
+    }, []);
 }
 
 /**
