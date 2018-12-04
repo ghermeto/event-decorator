@@ -1,5 +1,13 @@
+/**
+ * @module events-decorator
+ * @author gui.hermeto@gmail.com
+ * @licence MIT
+ */
+
 const EventEmitter = require('events');
-const assert = require('assert').strict;
+const assertLib = require('assert');
+
+const assert = assertLib.strict || assertLib;
 
 /**
  * @typedef {function(): void} Unsubscriber
@@ -13,9 +21,9 @@ const assert = require('assert').strict;
  * @param {Function} handler
  */
 function assertParams(emitter, eventNames, handler) {
-    assert.ok(emitter instanceof EventEmitter, 'emitter must be an instance of EventEmitter');
-    assert.ok(Array.isArray(eventNames), 'eventNames must be an array');
-    assert.ok(typeof handler === 'function', 'handler must be a function');
+    assert(emitter instanceof EventEmitter, 'emitter must be an instance of EventEmitter');
+    assert(Array.isArray(eventNames), 'eventNames must be an array');
+    assert(typeof handler === 'function', 'handler must be a function');
 }
 
 /**
